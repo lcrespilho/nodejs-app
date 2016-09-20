@@ -1,0 +1,11 @@
+{
+  "extends": "google",
+  "installedESLint": true,
+  "plugins": [
+    "html"
+  ],
+  "env": {
+    "jquery": true,
+    "browser": true
+  }
+}
