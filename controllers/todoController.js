@@ -1,11 +1,15 @@
 var bodyParser = require('body-parser');
-var urlencodedParser = bodyParser.urlencoded({extended: false});
+var mongoose = require('mongoose');
+
+// Connect to the database
+mongoose.connect('mongodb://test:test@blah.mlab.com:234234/todo');
 
 var data = [
   {item: 'get milk'},
   {item: 'walk dog'},
   {item: 'kick some coding ass'}
 ];
+var urlencodedParser = bodyParser.urlencoded({extended: false});
 
 module.exports = function(app) {
   app.get('/todo', (req, res) => {
